@@ -15,7 +15,7 @@
        // var_dump($emp_data);
        //var_dump(PARAM_EMP_NAME);
 
-      echo '<li><a href="', $emp_id, '=', $id, '">', $emp_data[PARAM_EMP_NAME], '</a></li>';
+      echo '<li><a href="', $emp_id, '">', $emp_data[PARAM_EMP_NAME], '</a></li>';
 
 
         }
