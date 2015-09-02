@@ -5,7 +5,9 @@ $emp_id = 102; // Employé "par défaut"
 $liste_employes = get_employes(); // Liste des noms de tous les employés
 $emp_data = $liste_employes[$emp_id];
 $agenda = get_agenda($emp_id);
+
 ?>
+
 <html>
 	<head>
         <meta charset = "UTF-8" />
@@ -16,10 +18,16 @@ $agenda = get_agenda($emp_id);
     <h2>Activité de l'employé <?php echo $emp_data['emp_name'] ?> </h2>
 	<div id="agenda">
 		<table>
-			<tr><th>Heure</th><th>Activité</th></tr>	
-<?php
-// TODO: Afficher l'agenda de l'employé
-?>
+
+
+			<tr><th>Heure</th><th>Activité</th></tr>
+
+			<?php
+			foreach($agenda as $heure=> $activité){
+				echo '<tr><td>', $heure,'</td>', '<td>', $activité,'</td></tr>';}
+			?>
+			<br/>
+
 		</table>
 	</div>
     <?php require_once('view_bloc/_view_footer.php') ?>
